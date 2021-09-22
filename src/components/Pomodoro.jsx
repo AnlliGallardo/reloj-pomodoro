@@ -17,7 +17,7 @@ export default function Pomodoro() {
     const [displayMensaje, setDisplayMensaje] = useState(false);
     const [intervaloId, setIntervaloId] = useState(0);
     const [pausa, setPausa] = useState(true);
-    // const [audioBeep, setAudioBeep] = useState();
+    
 
     
     const incrementE = () => {
@@ -72,7 +72,7 @@ export default function Pomodoro() {
                 if(segundos === 0) {
                     if (minut !== 0) {
                       setSegundos(59);
-                      setMinut(minut - 1);
+                      setMinut(m => - 1);
                     } else {
                         let minut = displayMensaje ? tiempo - 1 : espera - 1;
                         let segundos = 59;
@@ -90,7 +90,7 @@ export default function Pomodoro() {
                         clearInterval(intervaloId);
                         setIntervaloId(0);
                         }
-                    }, [segundos, pausa]);
+    }, [segundos, pausa]);
  
 
 
