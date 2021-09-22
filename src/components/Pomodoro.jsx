@@ -90,7 +90,7 @@ export default function Pomodoro() {
                         clearInterval(intervaloId);
                         setIntervaloId(0);
                         }
-    }, [segundos, pausa]);
+    }, [segundos, pausa, tiempo, espera, displayMensaje, intervaloId, minut]);
  
 
 
