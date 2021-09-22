@@ -82,7 +82,7 @@ export default function Pomodoro() {
                         setDisplayMensaje(!displayMensaje);
                         }
                         } else {
-                            setSegundos(segundos - 1);
+                            setSegundos(s => - 1);
                         }
                         }, 1000);
                         setIntervaloId(newIntervaloId);
